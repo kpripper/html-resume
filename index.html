@@ -1,249 +1,315 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Developer CV</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 210mm;
+        margin: 0 auto;
+        background: white;
+        padding: 40px 50px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        margin-bottom: 30px;
+        border-bottom: 3px solid #2c3e50;
+        padding-bottom: 20px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        color: #3498db;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .contact-item {
+        color: #555;
+        font-size: 13px;
+      }
+
+      .contact-item a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 20px;
+      }
+
+      .job-header,
+      .education-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        color: #2c3e50;
+      }
+
+      .job-period,
+      .education-period {
+        color: #7f8c8d;
+        font-size: 13px;
+      }
+
+      ul {
+        margin-left: 20px;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      li {
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+
+      h2 {
+        color: #2c3e50;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-left: 4px solid #3498db;
+        padding-left: 12px;
+      }
+
+      h3 {
+        color: #34495e;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .skills-list {
+        color: #555;
+        line-height: 1.8;
+        font-size: 14px;
+      }
+
+      .download-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        transition: all 0.3s;
+      }
+
+      .download-btn:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+      }
+
+      @media print {
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            padding: 20px;
+          background: white;
+          padding: 0;
         }
 
         .container {
-            max-width: 210mm;
-            margin: 0 auto;
-            background: white;
-            padding: 40px 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header {
-            margin-bottom: 30px;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 20px;
-        }
-
-        h1 {
-            color: #2c3e50;
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #3498db;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .contact-item {
-            color: #555;
-            font-size: 13px;
-        }
-
-        .contact-item a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .experience-item, .education-item {
-            margin-bottom: 20px;
-        }
-
-        .job-header, .education-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            color: #2c3e50;
-        }
-
-        .job-period, .education-period {
-            color: #7f8c8d;
-            font-size: 13px;
-        }
-
-        ul {
-            margin-left: 20px;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        li {
-            margin-bottom: 6px;
-            font-size: 14px;
-        }
-
-        h2 {
-            color: #2c3e50;
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-            padding-left: 12px;
-        }
-
-        h3 {
-            color: #34495e;
-            font-size: 16px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
-        .skills-list {
-            color: #555;
-            line-height: 1.8;
-            font-size: 14px;
+          box-shadow: none;
+          padding: 20mm;
         }
 
         .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
-            transition: all 0.3s;
+          display: none;
         }
-
-        .download-btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
-        }
-
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-                padding: 20mm;
-            }
-
-            .download-btn {
-                display: none;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <button class="download-btn" onclick="downloadPDF()">📄 Завантажити PDF</button>
+  </head>
+  <body>
+    <button class="download-btn" onclick="downloadPDF()">
+      📄 Завантажити PDF
+    </button>
 
     <div class="container" id="resume-content">
-        <div class="header">
-            <h1>Ілля Пігович</h1>
-            <div class="subtitle">JavaScript-розробник</div>
-            
-            <div class="contact-info">
-                <div class="contact-item">📧 <a href="mailto:1580509@gmail.com">1580509@gmail.com</a></div>
-                <div class="contact-item">📱 <a href="tel:+380501613934">+380501613934</a></div>
-                <div class="contact-item">📍 Камʼянець-Подільський, Україна</div>
-                <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/illya-pigovych" target="_blank">linkedin.com/in/illya-pigovych</a></div>
-                <div class="contact-item">💻 <a href="https://github.com/kpripper" target="_blank">github.com/kpripper</a></div>
-            </div>
+      <div class="header">
+        <h1>Ілля Пігович</h1>
+        <div class="subtitle">JavaScript-розробник</div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            📧 <a href="mailto:1580509@gmail.com">1580509@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            📱 <a href="tel:+380501613934">+380501613934</a>
+          </div>
+          <div class="contact-item">📍 Камʼянець-Подільський, Україна</div>
+          <div class="contact-item">
+            🔗
+            <a href="https://www.linkedin.com/in/illya-pigovych" target="_blank"
+              >linkedin.com/in/illya-pigovych</a
+            >
+          </div>
+          <div class="contact-item">
+            💻
+            <a href="https://github.com/kpripper" target="_blank"
+              >github.com/kpripper</a
+            >
+          </div>
         </div>
+      </div>
 
-        <h2>Про мене</h2>
-        <p>JavaScript-розробник з практичним досвідом створення вебсайтів, сервісів та автоматизацій. Працюю з повним циклом розробки: від верстки й клієнтської логіки до серверної частини, інтеграцій та оптимізації. </p>
+      <h2>Про мене</h2>
+      <p>
+        JavaScript-розробник з практичним досвідом створення вебсайтів, сервісів
+        та автоматизацій. Працюю з повним циклом розробки: від верстки й
+        клієнтської логіки до серверної частини, інтеграцій та оптимізації.
+      </p>
 
-        <h2>Освіта</h2>
-        <div class="education-item">
-            <div class="education-header">
-                <strong>Буковинський державний медичний університет</strong>
-                <span class="education-period">1999 — 2005</span>
-            </div>
-            <p>Лікувальна справа</p>
+      <h2>Освіта</h2>
+      <div class="education-item">
+        <div class="education-header">
+          <strong>Буковинський державний медичний університет</strong>
+          <span class="education-period">1999 — 2005</span>
         </div>
+        <p>Лікувальна справа</p>
+      </div>
 
-        <h2>Ключова спеціалізація</h2>
-        <p>Основний фокус — JavaScript та екосистема навколо нього. Працюю з серверною та клієнтською частиною застосунків: розробка backend-рішень на Node.js (серверна логіка, автоматизація, парсинг даних, інтеграція API, робота з базами даних, фонові процеси), а також створення браузерних розширень Chrome і frontend-додатків на базі React, Vite, Astro та Next.js. За потреби можу працювати з кодом на Python та PHP для розширення або підтримки існуючих рішень.</p>
+      <h2>Ключова спеціалізація</h2>
+      <p>
+        Основний фокус — JavaScript та екосистема навколо нього. Працюю з
+        серверною та клієнтською частиною застосунків: розробка backend-рішень
+        на Node.js (серверна логіка, автоматизація, парсинг даних, інтеграція
+        API, робота з базами даних, фонові процеси), а також створення
+        браузерних розширень Chrome і frontend-додатків на базі React, Vite,
+        Astro та Next.js. За потреби можу працювати з кодом на Python та PHP для
+        розширення або підтримки існуючих рішень.
+      </p>
 
-        <h2>Технічні навички</h2>
+      <h2>Технічні навички</h2>
 
-        <h3>Backend</h3>
-        <p>Розробка серверних застосунків на Node.js: проєктування backend-архітектури, побудова сервісів і скриптів для обробки даних, автоматизації та інтеграцій. Cтворення HTTP-сервісів, фонового виконання задач, обробки великих обсягів даних, оптимізації продуктивності та стабільності Node.js-застосунків у продакшені.</p>
-        <p>Express.js — побудова REST‑сервісів, middleware та API. </p>
+      <h3>Backend</h3>
+      <p>
+        Розробка серверних застосунків на Node.js: проєктування
+        backend-архітектури, побудова сервісів і скриптів для обробки даних,
+        автоматизації та інтеграцій. Cтворення HTTP-сервісів, фонового виконання
+        задач, обробки великих обсягів даних, оптимізації продуктивності та
+        стабільності Node.js-застосунків у продакшені.
+      </p>
+      <p>Express.js — побудова REST‑сервісів, middleware та API.</p>
 
-        <h3>Бази даних</h3>
-        <p><strong>MongoDB</strong> — проєктування схем документів, робота з колекціями, індексами та агрегаціями, використання в Node.js‑застосунках для зберігання й обробки великих обсягів даних, оптимізація запитів.</p>
-        <p><strong>PostgreSQL, MySQL</strong> — досвід використання реляційних баз даних у backend‑сервісах та скриптах: проєктування структури даних, робота з транзакціями, оптимізація запитів, імпорт і експорт даних.</p>
+      <h3>Бази даних</h3>
+      <p>
+        <strong>MongoDB</strong> — проєктування схем документів, робота з
+        колекціями, індексами та агрегаціями, використання в Node.js‑застосунках
+        для зберігання й обробки великих обсягів даних, оптимізація запитів.
+      </p>
+      <p>
+        <strong>PostgreSQL, MySQL</strong> — досвід використання реляційних баз
+        даних у backend‑сервісах та скриптах: проєктування структури даних,
+        робота з транзакціями, оптимізація запитів, імпорт і експорт даних.
+      </p>
 
-        <h3>API та інтеграції</h3>
-        <p class="skills-list">Google APIs (YouTube, Google Cloud), Meta Graph API (Instagram, Threads), окремі Web API (Telegram, OpenAI, WordPress, PayPal, Cloudflare, HuggingFace, Openrouter).</p>
+      <h3>API та інтеграції</h3>
+      <p class="skills-list">
+        Google APIs (YouTube, Google Cloud), Meta Graph API (Instagram,
+        Threads), окремі Web API (Telegram, OpenAI, WordPress, PayPal,
+        Cloudflare, HuggingFace, Openrouter).
+      </p>
 
-        <h3>Frontend</h3>
-        <p>Розробка браузерних розширень для Chrome. Створення додатків - React, Vite, Astro, Next.js: SPA, SSR, SSG, взаємодія з backend‑API, збірка та оптимізація клієнтського коду.</p>
+      <h3>Frontend</h3>
+      <p>
+        Розробка браузерних розширень для Chrome. Створення додатків - React,
+        Vite, Astro, Next.js: SPA, SSR, SSG, взаємодія з backend‑API, збірка та
+        оптимізація клієнтського коду.
+      </p>
 
-        <h3>Парсинг та автоматизація</h3>
-        <p>Puppeteer, Selenium (headless-браузери, робота з динамічним контентом, SPA, емуляція дій користувача), HTML-парсинг, робота з DOM. Налаштування User-Agent, cookies, затримок запитів, базові підходи до обходу rate limiting та захистів.</p>
+      <h3>Парсинг та автоматизація</h3>
+      <p>
+        Puppeteer, Selenium (headless-браузери, робота з динамічним контентом,
+        SPA, емуляція дій користувача), HTML-парсинг, робота з DOM. Налаштування
+        User-Agent, cookies, затримок запитів, базові підходи до обходу rate
+        limiting та захистів.
+      </p>
 
-        <h3>Інструменти та середовище</h3>
-        <p>Linux (bash, terminal), WSL, Git, Terraform. Налаштування середовища розробки, деплой скриптів та сервісів на VPS та AWS.</p>
+      <h3>Інструменти та середовище</h3>
+      <p>
+        Linux (bash, terminal), WSL, Git, Terraform. Налаштування середовища
+        розробки, деплой скриптів та сервісів на VPS та AWS.
+      </p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        function downloadPDF() {
-            const element = document.getElementById('resume-content');
-            const button = document.querySelector('.download-btn');
-            
-            button.textContent = 'Генерація...';
-            button.disabled = true;
+      function downloadPDF() {
+        const element = document.getElementById("resume-content")
+        const button = document.querySelector(".download-btn")
 
-            const opt = {
-                margin: 0,
-                filename: 'Illya_Pigovych_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { 
-                    scale: 2, 
-                    useCORS: true,
-                    letterRendering: true
-                },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+        button.textContent = "Генерація..."
+        button.disabled = true
 
-            html2pdf().set(opt).from(element).save().then(() => {
-                button.textContent = '📄 Завантажити PDF';
-                button.disabled = false;
-            }).catch(err => {
-                console.error(err);
-                button.textContent = '❌ Помилка';
-                button.disabled = false;
-            });
+        const opt = {
+          margin: 0,
+          filename: "Illya_Pigovych_CV.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            letterRendering: true,
+          },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
         }
+
+        html2pdf()
+          .set(opt)
+          .from(element)
+          .save()
+          .then(() => {
+            button.textContent = "📄 Завантажити PDF"
+            button.disabled = false
+          })
+          .catch((err) => {
+            console.error(err)
+            button.textContent = "❌ Помилка"
+            button.disabled = false
+          })
+      }
     </script>
-</body>
+  </body>
 </html>
